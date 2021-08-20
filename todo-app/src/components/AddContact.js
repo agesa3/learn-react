@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const AddTodo = (props) => {
+const AddContact = (props) => {
   const [input, setInput] = useState({
     name: "",
     email: "",
@@ -15,7 +15,6 @@ const AddTodo = (props) => {
     }
     props.addContactHandler({ ...input });
     setInput({ name: "", email: "" });
-
   };
   const handleChange = (event) => {
     setInput({
@@ -26,14 +25,14 @@ const AddTodo = (props) => {
 
   return (
     <div className="ui main">
-      <h2>Add Todo</h2>
+      <h2>Add Contact</h2>
       <form className="ui form" onSubmit={add}>
         <div className="field">
           <label>Name</label>
           <input
             type="text"
             name="name"
-            placeholder="Todo Title"
+            placeholder="Contact Name"
             value={input.name}
             onChange={handleChange}
           />
@@ -43,7 +42,7 @@ const AddTodo = (props) => {
           <input
             type="email"
             name="email"
-            placeholder="Todo Title"
+            placeholder="Contact Email"
             value={input.email}
             onChange={handleChange}
           />
@@ -54,4 +53,4 @@ const AddTodo = (props) => {
   );
 };
 
-export default AddTodo;
+export default AddContact;

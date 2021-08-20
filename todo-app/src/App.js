@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./components/Header";
-import AddTodo from "./components/AddTodo";
-import Todo from "./components/Todo";
+import AddContact from "./components/AddContact";
+import Contact from "./components/Contact";
 import { useState, useEffect } from "react";
 import { uuid } from "uuidv4";
 
@@ -34,10 +34,10 @@ function App() {
   return (
     <div className="ui container">
       <Header />
-      <AddTodo addContactHandler={addContactHandler} />
-      <Todo contacts={contacts} getContactId={removeContactHandler} />
+      <AddContact addContactHandler={addContactHandler} />
+      <Contact contacts={contacts} getContactId={removeContactHandler} />
     </div>
   );
 }
- 
+
 export default App;

@@ -1,7 +1,7 @@
 import React from "react";
-import TodoCard from "./TodoCard";
+import ContactCard from "./ContactCard";
 
-const Todo = (props) => {
+const Contact = (props) => {
   console.log(props);
 
   const deleteContactHandler = (id) => {
@@ -10,7 +10,7 @@ const Todo = (props) => {
 
   const renderContactList = props.contacts.map((contact) => {
     return (
-      <TodoCard 
+      <ContactCard 
         contact={contact}
         clickHandler={deleteContactHandler}
         key={contact.id}
@@ -24,4 +24,4 @@ const Todo = (props) => {
   );
 };
 
-export default Todo;
+export default Contact;
